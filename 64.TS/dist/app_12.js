@@ -3,3 +3,14 @@
 const str_12 = 'hello';
 let newStr = '';
 const glas = ['a', 'e', 'o', 'i', 'u', 'y'];
+let i = 0;
+while (i < str_12.length) {
+    i++;
+    if (!str_12[i].includes(glas)) {
+        newStr += str_12[i];
+    }
+    else {
+        newStr += '*';
+    }
+}
+console.log(newStr);

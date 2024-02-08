@@ -4,14 +4,14 @@
 // 444444 -> 4 чет 4 чет 4 чет 4 чет 4 чет 4 чет
 
 
-const striing: string = '123456434334';
-let result: string = ''
-for (let i = 0; i < striing.length; i++) {
-    if (striing[i] % 2 == 0) {
-        result += striing[i] + ' чет '
-    } else{
-        result += striing[i] + ' неч '
-    }
-}
+// const striing: string = '123456434334';
+// let result: string = ''
+// for (let i = 0; i < striing.length; i++) {
+//     if (striing[i] % 2 == 0) {
+//         result += striing[i] + ' чет '
+//     } else{
+//         result += striing[i] + ' неч '
+//     }
+// }
 
-console.log(result);
+// console.log(result);

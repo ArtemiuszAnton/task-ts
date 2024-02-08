@@ -4,10 +4,11 @@
 // world" результатом должна быть строка "Hello World".
 
 
-let sentence: string = prompt();
+let sentence: string = prompt().split(' ');
+let upperSentence: string = '';
 
 for (let i = 0; i < sentence.length; i++) {
-   
+    upperSentence += `${sentence[i][0].toUpperCase()}${sentence[i].slice(1, length - 1)} `
 }
 
-console.log(sentence);
+console.log(upperSentence);
