@@ -1,6 +1,5 @@
-// 5. У вас есть массив объектов вида приведенного в приложении. Необходимо
-// вывести товар с максимальным прайсом
-
+// 8. У вас есть массив строковых значений почт. Необходимо вывести значения
+// массива без дубликатов. Добавить проверки на тип данных, почту
 
 interface arr {
     readonly id: number;
@@ -9,7 +8,7 @@ interface arr {
     price: number
 }
 
-const arr_005: arr[] = [
+const arr_008: arr[] = [
     { id: 1, title: 'Часы', count: 10, price: 500 },
     { id: 2, title: 'Смартфон', count: 33, price: 1500 },
     { id: 3, title: 'Моноблок', count: 6, price: 2200 },
@@ -18,26 +17,3 @@ const arr_005: arr[] = [
 ];
 
 
-// function findMaxPrice(arr_005: arr[]): arr {
-//     let maxPrice = arr_005[0];
-
-//     for (let i = 0; i < arr_005.length; i++) {
-//         if (arr_005[i].price > maxPrice.price) maxPrice = arr_005[i]
-//     }
-//     return maxPrice
-// }
-
-// const result_005 = findMaxPrice(arr_005);
-// console.log(result_005);
-
-function findMaxPrice(arr_005: arr[]): arr {
-    let maxPrice: arr = arr_005[0]
-    arr_005.forEach((el: arr) => {
-        if (el.price > maxPrice.price)
-            maxPrice = el
-    })
-    return maxPrice
-}
-
-const result_005 = findMaxPrice(arr_005);
-console.log(result_005);

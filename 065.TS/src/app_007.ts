@@ -1,5 +1,6 @@
-// 5. У вас есть массив объектов вида приведенного в приложении. Необходимо
-// вывести товар с максимальным прайсом
+// 7. У вас есть массив объектов вида приведенного в приложении. Необходимо
+// вывести тот товар, где количество * прайс является наибольшим значением
+
 
 
 interface arr {
@@ -9,7 +10,7 @@ interface arr {
     price: number
 }
 
-const arr_005: arr[] = [
+const arr_007: arr[] = [
     { id: 1, title: 'Часы', count: 10, price: 500 },
     { id: 2, title: 'Смартфон', count: 33, price: 1500 },
     { id: 3, title: 'Моноблок', count: 6, price: 2200 },
@@ -18,26 +19,14 @@ const arr_005: arr[] = [
 ];
 
 
-// function findMaxPrice(arr_005: arr[]): arr {
-//     let maxPrice = arr_005[0];
-
-//     for (let i = 0; i < arr_005.length; i++) {
-//         if (arr_005[i].price > maxPrice.price) maxPrice = arr_005[i]
-//     }
-//     return maxPrice
-// }
-
-// const result_005 = findMaxPrice(arr_005);
-// console.log(result_005);
-
-function findMaxPrice(arr_005: arr[]): arr {
-    let maxPrice: arr = arr_005[0]
-    arr_005.forEach((el: arr) => {
-        if (el.price > maxPrice.price)
-            maxPrice = el
+function findMaxCounts(arr_007: arr[]): arr {
+    let result_007 = arr_007[0];
+    arr_007.forEach((el) => {
+        if ((el.count * el.price) > (result_007.count * result_007.price)) result_007 = el
     })
-    return maxPrice
+    return result_007
 }
 
-const result_005 = findMaxPrice(arr_005);
-console.log(result_005);
+
+const maxPrice = findMaxPrice(arr_007);
+console.log(maxPrice);
