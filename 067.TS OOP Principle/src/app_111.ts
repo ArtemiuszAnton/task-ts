@@ -19,7 +19,7 @@ abstract class University {
 class Student extends University {
     getStudentById(id: number) {
         for (const stud of this.students) {
-            if (stud.id == id) return this.students
+            if (stud.id == id) return stud
         }
         return null
     }

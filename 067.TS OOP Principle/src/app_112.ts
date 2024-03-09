@@ -5,3 +5,20 @@
 // Необходимо вывести в консоль массив из репозитория
 
 
+class ServerGetAll {
+    controller(): void {
+        console.log(this.service);
+    }
+
+    service() {
+        return this.repository
+    }
+
+    repository(arr: number[]): number[] {
+        arr = [12, 23, 4334, 4, 34, 4];
+        return arr
+    }
+}
+
+const serverGetAll = new ServerGetAll();
+serverGetAll.controller()

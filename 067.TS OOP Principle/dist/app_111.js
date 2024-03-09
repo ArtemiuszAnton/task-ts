@@ -11,8 +11,8 @@ class University {
 class Student extends University {
     getStudentById(id) {
         for (const stud of this.students) {
-            if (stud == id)
-                return this.students;
+            if (stud.id == id)
+                return stud;
         }
         return null;
     }
