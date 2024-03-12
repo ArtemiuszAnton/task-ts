@@ -21,3 +21,9 @@ function chunkArray(array: any[], size: number): any[][] {
 
 }
 
+describe('Test for chunkArray', () => {
+    test('correct workin', () => {
+        const res = chunkArray([4, 45, 3, 4, 5, 6], 2);
+        expect(res).toEqual([[4, 45], [3, 4], [5, 6]])
+    })
+})
